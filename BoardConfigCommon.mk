@@ -1,1 +1,5 @@
 DEVICE_PATH := device/lineage/gsi
+
+# SELinux
+SELINUX_IGNORE_NEVERALLOWS := true
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private

@@ -18,6 +18,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     resetprop_sys
 
+# Meizu vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.3-service.meizu
+
 # Overlays
 PRODUCT_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay \

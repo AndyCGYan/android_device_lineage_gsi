@@ -1,0 +1,11 @@
+on post-fs
+    exec - root -- /system/bin/treble-post-fs.sh
+
+on property:persist.sys.treble.caf.audio_policy=*
+    exec u:r:phhsu_daemon:s0 root -- /system/bin/treble-prop-handler.sh "persist.sys.treble.caf.audio_policy"
+
+on property:persist.sys.treble.caf.disable_soundvolume_effect=*
+    exec u:r:phhsu_daemon:s0 root -- /system/bin/treble-prop-handler.sh "persist.sys.treble.caf.disable_soundvolume_effect"
+
+on property:persist.sys.treble.backlight_scale=*
+    exec u:r:phhsu_daemon:s0 root -- /system/bin/treble-prop-handler.sh "persist.sys.treble.backlight_scale"

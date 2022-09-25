@@ -46,4 +46,7 @@
     </array>
 
     <bool name="config_supportAudioSourceUnprocessed">true</bool>
+
+    <!-- Is the device capable of hot swapping an UICC Card -->
+    <bool name="config_hotswapCapable">true</bool>
 </resources>

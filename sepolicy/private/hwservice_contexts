@@ -1,0 +1,3 @@
+# HIDL interface for QcRilAm
+vendor.qti.hardware.radio.am::IQcRilAudio    u:object_r:hal_telephony_hwservice:s0
+vendor.qti.qcril.am::IQcRilAudio             u:object_r:hal_telephony_hwservice:s0

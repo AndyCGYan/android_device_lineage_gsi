@@ -1,0 +1,10 @@
+vendor_public_prop(vendor_ims_prop)
+vendor_public_prop(vendor_mtk_radio_prop)
+
+allow radio default_android_service:service_manager { find add };
+allow radio vendor_ims_prop:file read;
+allow radio vendor_mtk_radio_prop:property_service set;
+allow rild default_prop:file read;
+allow system_app default_android_hwservice:hwservice_manager find;
+allow system_app default_prop:property_service set;
+allow system_app telephony_config_prop:property_service set;

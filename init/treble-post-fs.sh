@@ -53,11 +53,7 @@ if [ -f /system/etc/phh-secure ]; then
     resetprop_sys ro.boot.veritymode enforcing
     resetprop_sys ro.boot.warranty_bit 0
     resetprop_sys ro.warranty_bit 0
-    resetprop_sys ro.debuggable 0
     resetprop_sys ro.secure 1
     resetprop_sys ro.build.type user
     resetprop_sys ro.build.selinux 0
-
-    resetprop_sys ro.adb.secure 1
-    setprop ctl.restart adbd
 fi

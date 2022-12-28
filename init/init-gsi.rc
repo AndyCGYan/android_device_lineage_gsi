@@ -1,6 +1,9 @@
 on post-fs
     exec - root -- /system/bin/treble-post-fs.sh
 
+on property:persist.sys.treble.mainkeys=*
+    setprop qemu.hw.mainkeys ${persist.sys.treble.mainkeys}
+
 on property:persist.sys.treble.caf.audio_policy=*
     exec u:r:phhsu_daemon:s0 root -- /system/bin/treble-prop-handler.sh "persist.sys.treble.caf.audio_policy"
 

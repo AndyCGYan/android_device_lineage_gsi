@@ -79,3 +79,16 @@ if [ "$1" == "persist.sys.treble.backlight_scale" ];then
     fi
     exit
 fi
+
+if [ "$1" == "persist.sys.treble.securize" ];then
+    if [[ "$prop_value" != "true" && "$prop_value" != "false" ]]; then
+        exit 1
+    fi
+
+    if [[ "$prop_value" == "true" ]]; then
+        touch /metadata/phh-secure
+    else
+        rm /metadata/phh-secure
+    fi
+    exit
+fi

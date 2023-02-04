@@ -12,7 +12,7 @@ copyprop() {
     fi
 }
 
-if getprop ro.vendor.build.fingerprint | grep -qi -e iaomi/mona; then
+if getprop ro.vendor.build.fingerprint | grep -qi -e iaomi/mona -e iaomi/taoyao; then
     copyprop ro.product.manufacturer ro.product.vendor.manufacturer
 fi
 

@@ -57,3 +57,5 @@ if [ -f /metadata/phh-secure ]; then
     resetprop_sys ro.build.type user
     resetprop_sys ro.build.selinux 0
 fi
+
+mount -o bind /mnt/phh/empty_dir /vendor/app/Honeywell_SoftBox

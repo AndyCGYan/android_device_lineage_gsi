@@ -16,7 +16,7 @@ if getprop ro.vendor.build.fingerprint | grep -qi -e iaomi/mona -e iaomi/taoyao;
     copyprop ro.product.manufacturer ro.product.vendor.manufacturer
 fi
 
-if [ -f /metadata/phh-secure ]; then
+if [ -f /metadata/phh-secure ] || [ -f /data/adb/phh-secure ]; then
     copyprop ro.build.device ro.vendor.build.device
     copyprop ro.system.build.fingerprint ro.vendor.build.fingerprint
     copyprop ro.bootimage.build.fingerprint ro.vendor.build.fingerprint

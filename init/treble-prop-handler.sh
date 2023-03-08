@@ -87,8 +87,10 @@ if [ "$1" == "persist.sys.treble.securize" ];then
 
     if [[ "$prop_value" == "true" ]]; then
         touch /metadata/phh-secure
+        touch /data/adb/phh-secure
     else
         rm /metadata/phh-secure
+        rm /data/adb/phh-secure
     fi
     exit
 fi

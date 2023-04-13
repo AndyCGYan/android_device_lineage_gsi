@@ -12,10 +12,6 @@ copyprop() {
     fi
 }
 
-if getprop ro.vendor.build.fingerprint | grep -qi -e iaomi/mona -e iaomi/taoyao; then
-    copyprop ro.product.manufacturer ro.product.vendor.manufacturer
-fi
-
 if [ -f /metadata/phh-secure ] || [ -f /data/adb/phh-secure ]; then
     copyprop ro.build.device ro.vendor.build.device
     copyprop ro.system.build.fingerprint ro.vendor.build.fingerprint
@@ -59,3 +55,6 @@ if [ -f /metadata/phh-secure ] || [ -f /data/adb/phh-secure ]; then
 fi
 
 mount -o bind /mnt/phh/empty_dir /vendor/app/Honeywell_SoftBox
+
+# Redirect vendor props for QCOM hwcomposer
+setprop debug.phh.props.omposer-service vendor

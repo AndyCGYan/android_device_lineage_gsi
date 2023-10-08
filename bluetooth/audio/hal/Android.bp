@@ -25,7 +25,7 @@ cc_binary {
         "libhidlbase",
         "liblog",
         "libutils",
-        "android.hardware.bluetooth.audio-V2-ndk",
+        "android.hardware.bluetooth.audio-V3-ndk",
         "libbluetooth_audio_session_aidl_system",
     ],
     required: [

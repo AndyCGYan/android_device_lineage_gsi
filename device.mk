@@ -35,5 +35,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
 # Two-pane layout in Settings
-PRODUCT_PACKAGES += \
-    androidx.window.extensions
+$(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.settings.large_screen_opt.enabled=true

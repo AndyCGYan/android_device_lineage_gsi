@@ -25,7 +25,3 @@ bluetooth.profile.sap.server.enabled?=true
 # MAJOR_CLASS: 0x02 -> 2 (Phone)
 # MINOR_CLASS: 0x0C -> 12 (Smart Phone)
 bluetooth.device.class_of_device=90,2,12
-
-# Override media volume steps
-ro.config.media_vol_steps=25
-ro.config.media_vol_default=8

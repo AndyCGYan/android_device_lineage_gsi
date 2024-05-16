@@ -53,3 +53,7 @@ mount -o bind /mnt/phh/empty_dir /vendor/app/Honeywell_SoftBox
 
 # Redirect vendor props for QCOM hwcomposer
 setprop debug.phh.props.omposer-service vendor
+
+# Override media volume steps
+resetprop_sys ro.config.media_vol_steps 25
+resetprop_sys ro.config.media_vol_default 8

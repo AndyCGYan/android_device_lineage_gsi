@@ -8,6 +8,7 @@ copyprop() {
 }
 
 mount -o bind /mnt/phh/empty_dir /vendor/app/Honeywell_SoftBox
+mount -o bind /mnt/phh/empty_dir /vendor/app/ModemSettings
 
 # Redirect vendor props for QCOM hwcomposer
 setprop debug.phh.props.omposer-service vendor

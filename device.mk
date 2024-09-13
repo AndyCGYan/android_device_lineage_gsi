@@ -18,6 +18,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     resetprop_sys
 
+# Hide display cutout
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.support_hide_display_cutout=true
+PRODUCT_PACKAGES += \
+    AvoidAppsInCutoutOverlay \
+    NoCutoutOverlay
+
 # Meizu vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.3-service.meizu

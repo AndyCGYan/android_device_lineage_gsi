@@ -1,3 +1,2 @@
 /system/bin/hw/android\.hardware\.bluetooth\.audio-service-system    u:object_r:hal_audio_sysbta_exec:s0
-/system/bin/phh-su                                                   u:object_r:phhsu_exec:s0
 /system/bin/treble-post-fs.sh                                        u:object_r:phhsu_exec:s0

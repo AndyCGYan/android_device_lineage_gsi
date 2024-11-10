@@ -3,14 +3,6 @@ on early-init
     mount tmpfs tmpfs /mnt/phh rw,nodev,relatime,mode=755,gid=0
     mkdir /mnt/phh/empty_dir
     write /mnt/phh/empty_file ""
-    mount none /mnt/phh/empty_file /system/bin/hw/android.hardware.vibrator@1.3-service.meizu bind
-    mount none /mnt/phh/empty_file /system/etc/init/android.hardware.vibrator@1.3-service.meizu.rc bind
-    mount none /system/etc/vintf/manifest/manifest_dummy.xml /system/etc/vintf/manifest/android.hardware.vibrator@1.3-service.meizu.xml bind
-
-on early-init && property:ro.product.vendor.brand=meizu
-    umount /system/bin/hw/android.hardware.vibrator@1.3-service.meizu
-    umount /system/etc/init/android.hardware.vibrator@1.3-service.meizu.rc
-    umount /system/etc/vintf/manifest/android.hardware.vibrator@1.3-service.meizu.xml
 
 on post-fs
     exec - root -- /system/bin/treble-post-fs.sh

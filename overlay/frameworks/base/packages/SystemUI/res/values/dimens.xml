@@ -17,5 +17,5 @@
 -->
 <resources>
     <!-- Fix for the qs glitch on displays under sw372dp -->
-    <dimen name="rounded_corner_content_padding">4dp</dimen>
+    <dimen name="rounded_corner_content_padding">8dp</dimen>
 </resources>
